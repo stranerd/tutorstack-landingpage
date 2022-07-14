@@ -12,19 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 5px; /* Remove scrollbar space */
-  height: 6px; /* Remove scrollbar space */
-  background: #7483bf4e; /* Optional: just make scrollbar invisible */
-}
-
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #8c72ff80;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
 @layer components {
   .btn {
     @apply flex items-center justify-center px-8 py-2 text-sm font-normal  text-dark bg-primary rounded-md hover:scale-105 transition-all duration-300;
