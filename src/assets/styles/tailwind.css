@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Remove scrollbar space */
+  height: 6px; /* Remove scrollbar space */
+  background: #7483bf4e; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #8c72ff80;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center px-8 py-2 text-base font-normal  text-dark bg-primary rounded-md;
+  }
+
+  .btn-outline {
+    @apply flex items-center justify-center px-6 py-2 text-base font-medium   text-primary border border-primary rounded-lg;
+  }
+  .pc {
+    @apply !hidden md:!flex;
+  }
+  .mobile {
+    @apply md:!hidden !flex;
+  }
+  .card {
+    @apply rounded-md shadow-xl bg-white;
+  }
+  .field {
+    @apply flex flex-col w-full mt-8;
+  }
+  .input {
+    @apply px-4 py-3 font-medium rounded-[10px] w-full bg-[#F1F3F7] outline-none mt-3;
+  }
+  .label {
+    @apply text-xl font-bold text-[#05090D] gap-4;
+  }
+}
