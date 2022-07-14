@@ -7,6 +7,7 @@ module.exports = {
 				primary: '#FCC602',
 				secondary: '#663399',
 				dark: '#05090D',
+				gray: '#494C58',
 			},
 		},
 	},

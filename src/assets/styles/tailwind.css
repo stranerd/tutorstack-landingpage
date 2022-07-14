@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center px-8 py-2 text-base font-normal  text-dark bg-primary rounded-md;
+    @apply flex items-center justify-center px-8 py-2 text-sm font-normal  text-dark bg-primary rounded-md hover:scale-105 transition-all duration-300;
   }
 
   .btn-outline {
@@ -43,12 +43,12 @@ html {
     @apply rounded-md shadow-xl bg-white;
   }
   .field {
-    @apply flex flex-col w-full mt-8;
+    @apply flex flex-col w-full;
   }
   .input {
-    @apply px-4 py-3 font-medium rounded-[10px] w-full bg-[#F1F3F7] outline-none mt-3;
+    @apply px-4 py-3 font-normal rounded-md w-full bg-transparent border-gray border outline-none mt-3;
   }
   .label {
-    @apply text-xl font-bold text-[#05090D] gap-4;
+    @apply text-base font-semibold text-[#05090D] gap-4;
   }
 }
