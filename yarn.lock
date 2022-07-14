@@ -28,6 +28,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@stranerd/validate@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@stranerd/validate/-/validate-3.4.0.tgz#1f060b5b26b7a9f73cd08c6a3bcd67f0b9c48bc8"
+  integrity sha512-9kZ0kAUMEWBQ5A1cF02aVOIgucYmYG/KbkCd9mJOB+JfF3S0fNrFVVBQPV+96fiNxr89hhay7B9ryBVEaBEUjA==
+  dependencies:
+    url-regex-safe "^3.0.0"
+
 "@vitejs/plugin-vue@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.0.0.tgz#7081e2b3fbe04e291bb85107b9fb57a1fa5e6aeb"
@@ -489,6 +496,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+ip-regex@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-4.3.0.tgz#687275ab0f57fa76978ff8f4dddc8a23d5990db5"
+  integrity sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -748,6 +760,11 @@ tailwindcss@^3.1.6:
     quick-lru "^5.1.1"
     resolve "^1.22.1"
 
+tlds@^1.228.0:
+  version "1.231.0"
+  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.231.0.tgz#93880175cd0a06fdf7b5b5b9bcadff9d94813e39"
+  integrity sha512-L7UQwueHSkGxZHQBXHVmXW64oi+uqNtzFt2x6Ssk7NVnpIbw16CRs4eb/jmKOZ9t2JnqZ/b3Cfvo97lnXqKrhw==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
@@ -767,6 +784,14 @@ update-browserslist-db@^1.0.4:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+url-regex-safe@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/url-regex-safe/-/url-regex-safe-3.0.0.tgz#102a38f74a1a731973fa42690c6a56656fddff12"
+  integrity sha512-+2U40NrcmtWFVjuxXVt9bGRw6c7/MgkGKN9xIfPrT/2RX0LTkkae6CCEDp93xqUN0UKm/rr821QnHd2dHQmN3A==
+  dependencies:
+    ip-regex "4.3.0"
+    tlds "^1.228.0"
 
 util-deprecate@^1.0.2:
   version "1.0.2"
