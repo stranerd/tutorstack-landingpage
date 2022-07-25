@@ -53,7 +53,10 @@
 <script lang="ts" setup>
 import { useMailing } from '../hooks/mailing'
 
+
 const { email, school, message, error, submitEmail } = useMailing()
+
+
 </script>
 
 <style scoped>
