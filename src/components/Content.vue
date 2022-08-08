@@ -28,9 +28,9 @@
 					</span>
 					<span class="field">
 						<select v-model="school"
-						        class="input"
-						        placeholder="Are you in highschool/college?"
-						        required
+								class="input"
+								placeholder="Are you in highschool/college?"
+								required
 						>
 							<option disabled selected value="">
 								Are you in highschool/college?
@@ -57,19 +57,19 @@ const { email, school, message, error, submitEmail } = useMailing()
 </script>
 
 <style scoped>
-    /* .bg {
-		background: rgba(0, 0, 0, 0.75) url('../assets/images/bg.png');
-		background-blend-mode: darken;
-		background-size: cover;
-		background-repeat: no-repeat;
-	} */
+/* .bg {
+	background: rgba(0, 0, 0, 0.75) url('../assets/images/bg.png');
+	background-blend-mode: darken;
+	background-size: cover;
+	background-repeat: no-repeat;
+} */
 
-    select {
-        appearance: none;
-        /* background: url('../assets/images/logo.svg') white; */
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: 97% 50%;
-        z-index: 100;
-    }
+select {
+    appearance: none;
+    /* background: url('../assets/images/logo.svg') white; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 97% 50%;
+    z-index: 100;
+}
 </style>
