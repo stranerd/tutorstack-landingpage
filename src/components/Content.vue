@@ -21,7 +21,7 @@
 							id="email"
 							v-model="email"
 							class="input"
-							placeholder="Enter your mail"
+							placeholder="Enter your email"
 							required
 							type="email"
 						/>
