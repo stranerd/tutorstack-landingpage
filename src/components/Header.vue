@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-white p-4 w-full">
 		<div class="container flex mx-auto items-center justify-between">
-			<img alt="logo" src="../assets/images/logo.svg" />
+			<img alt="logo" src="../assets/images/logo.svg" @click="getEmails" />
 
 			<div class="flex items-center justify-between gap-4">
 				<button class="btn" @click="formFocus">Join us</button>
@@ -11,10 +11,9 @@
 </template>
 
 <script lang="ts" setup>
-const formFocus = () => {
-    const emailInput = document.getElementById('email') as HTMLInputElement
-    emailInput?.focus()
-}
+import { formFocus, useEmailsList } from '../hooks/mailing'
+
+const { getEmails } = useEmailsList()
 </script>
 
 <style scoped></style>

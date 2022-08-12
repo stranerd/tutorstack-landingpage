@@ -14,12 +14,33 @@
 			</div>
 
 			<form class="flex flex-col w-full max-w-3xl px-8 mt-12" @submit.prevent="submitEmail">
-				<label class="label" for="email">Join the waitlist now!</label>
-				<div class="md:flex gap-4">
+				<label class="label" for="name" @click="formFocus">Join the waitlist now!</label>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<span class="field">
+						<input
+							id="name"
+							v-model="factory.name"
+							class="input"
+							placeholder="Enter your full name"
+							required
+							type="text"
+						/>
+					</span>
+					<span class="field">
+						<input
+							id="phone"
+							v-model="factory.phone"
+							class="input"
+							pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+							placeholder="Enter your phone number"
+							required
+							type="tel"
+						/>
+					</span>
 					<span class="field">
 						<input
 							id="email"
-							v-model="email"
+							v-model="factory.email"
 							class="input"
 							placeholder="Enter your email"
 							required
@@ -27,33 +48,31 @@
 						/>
 					</span>
 					<span class="field">
-						<select v-model="school"
+						<select v-model="factory.school"
 								class="input"
-								placeholder="Are you in highschool/college?"
-								required
-						>
+								required>
 							<option disabled selected value="">
-								Are you in highschool/college?
+								Are you in high school or college?
 							</option>
 							<option value="High School">High School</option>
 							<option value="College">College</option>
 						</select>
 					</span>
 				</div>
-				<button class="btn self-center mt-6 min-w-[318px] h-12" type="submit">
+				<button class="btn self-center mt-6 h-12" style="width: min(318px, 100%)" type="submit">
 					Request access
 				</button>
-				<div v-if="error" class="text-center w-full mt-6 text-red-500">{{ error }}</div>
-				<div v-if="message" class="text-center w-full mt-6 text-green-500">{{ message }}</div>
+				<div v-if="state.error" class="text-center w-full mt-6 text-red-500">{{ state.error }}</div>
+				<div v-if="state.message" class="text-center w-full mt-6 text-green-500">{{ state.message }}</div>
 			</form>
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { useMailing } from '../hooks/mailing'
+import { formFocus, useMailing } from '../hooks/mailing'
 
-const { email, school, message, error, submitEmail } = useMailing()
+const { state, factory, submitEmail } = useMailing()
 </script>
 
 <style scoped>
